@@ -1,39 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
+import Counter from "./component/Counter";
 
 function App() {
-  const [count, setCount] = useState(0);
   return (
     <>
-      <div className="App">{count}</div>
-      <button onClick={() => setCount(count + 1)}>Increment</button>
-      <button onClick={() => setCount(count - 1)}>Decrement</button>
+      <Counter />
     </>
   );
-}
-
-class AppClass extends React.Component {
-  state = {
-    count: 0,
-  };
-
-  add = (n) => {
-    this.setState({ count: n });
-  };
-
-  minus = (n) => {
-    this.setState({ count: n });
-  };
-
-  render() {
-    const { count } = this.state;
-    return (
-      <>
-        <div>{count}</div>
-        <button onClick={() => this.add(count + 1)}>Increment</button>
-        <button onClick={() => this.minus(count - 1)}>Decrement</button>
-      </>
-    );
-  }
 }
 
 export default App;
