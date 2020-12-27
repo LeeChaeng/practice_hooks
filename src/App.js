@@ -1,11 +1,11 @@
-import React from "react";
-import Counter from "./component/Counter";
+import React, { useState } from "react";
 
 function App() {
   return (
-    <>
-      <Counter />
-    </>
+    <div className="App">
+      <h1>Hello</h1>
+      <input placeholder="Name"></input>
+    </div>
   );
 }
 
