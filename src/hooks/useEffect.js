@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 
-function App() {
+function useEffect() {
   const sayHello = () => console.log("hello");
 
   const [number, setNumber] = useState(0);
   const [aNumber, setAnumber] = useState(0);
   useEffect(() => sayHello(), [number]);
   return (
-    <div className="App">
+    <div className="useEffect">
       <h1>Hi</h1>
       <button onClick={() => setNumber(number + 1)}>{number}</button>
       <button onClick={() => setAnumber(aNumber + 1)}>{aNumber}</button>
@@ -15,4 +15,4 @@ function App() {
   );
 }
 
-export default App;
+export default useEffect;
